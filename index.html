@@ -1,11 +1,803 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Briefing para criação de identidade visual de casamento." />
+  <meta name="theme-color" content="#F2F0EB" />
+
+  <title>Briefing de Casamento — João Alberto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  teste
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand__name">JOÃO ALBERTO</span>
+        <span class="brand__role">DESIGN DIGITAL</span>
+      </a>
+
+      <span class="header-tag">BRIEFING / CASAMENTO</span>
+    </header>
+
+    <main>
+      <form
+        id="weddingBriefing"
+        class="briefing"
+        action="https://formspree.io/f/mbdnvrjj"
+        method="POST"
+        novalidate
+      >
+        <input type="hidden" name="_subject" value="Novo briefing de identidade visual de casamento" />
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+        <section class="form-step form-step--intro is-active" data-step="0" id="inicio">
+          <div class="intro-grid">
+            <div class="eyebrow">
+              <span>IDENTIDADE VISUAL</span>
+              <span>PARA CASAMENTO</span>
+            </div>
+
+            <div class="intro-copy">
+              <p class="kicker">A história de vocês começa aqui.</p>
+              <h1>Vamos transformar sentimentos, memórias e detalhes em uma identidade única.</h1>
+              <p class="intro-text">
+                Este briefing nos ajuda a compreender o casal, a atmosfera da celebração
+                e tudo o que deve ser traduzido visualmente no projeto.
+              </p>
+
+              <div class="intro-meta">
+                <span>Tempo médio: 10–15 min</span>
+                <span>Salvamento automático</span>
+              </div>
+
+              <button class="button button--primary" type="button" data-next>
+                Começar briefing
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+
+            <div class="intro-mark" aria-hidden="true">
+              <span>J</span>
+              <span>+</span>
+              <span>A</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="1" data-section-title="O casal">
+          <div class="step-heading">
+            <span class="step-number">01</span>
+            <div>
+              <p class="step-kicker">Primeiro, as apresentações</p>
+              <h2>Sobre o casal</h2>
+              <p>Informações básicas para identificar o projeto e entender o contexto da celebração.</p>
+            </div>
+          </div>
+
+          <div class="fields-grid fields-grid--two">
+            <label class="field">
+              <span>Nome de uma das pessoas *</span>
+              <input type="text" name="nome_pessoa_1" autocomplete="name" required />
+            </label>
+
+            <label class="field">
+              <span>Nome da outra pessoa *</span>
+              <input type="text" name="nome_pessoa_2" required />
+            </label>
+
+            <label class="field">
+              <span>E-mail para contato *</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="field">
+              <span>Telefone / WhatsApp</span>
+              <input type="tel" name="telefone" autocomplete="tel" />
+            </label>
+
+            <label class="field">
+              <span>Data do casamento *</span>
+              <input type="date" name="data_casamento" required />
+            </label>
+
+            <label class="field">
+              <span>Horário previsto</span>
+              <input type="time" name="horario_casamento" />
+            </label>
+
+            <label class="field field--full">
+              <span>Local da cerimônia</span>
+              <input type="text" name="local_cerimonia" placeholder="Cidade, espaço, igreja ou local" />
+            </label>
+
+            <label class="field field--full">
+              <span>Local da recepção</span>
+              <input type="text" name="local_recepcao" placeholder="Caso seja diferente da cerimônia" />
+            </label>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Tipo de cerimônia</legend>
+            <div class="choice-grid">
+              <label class="choice-card">
+                <input type="radio" name="tipo_cerimonia" value="Religiosa" />
+                <span>Religiosa</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="tipo_cerimonia" value="Civil" />
+                <span>Civil</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="tipo_cerimonia" value="Simbólica" />
+                <span>Simbólica</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="tipo_cerimonia" value="Outra" />
+                <span>Outra</span>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="form-step" data-step="2" data-section-title="A história">
+          <div class="step-heading">
+            <span class="step-number">02</span>
+            <div>
+              <p class="step-kicker">O que torna vocês únicos</p>
+              <h2>A história de vocês</h2>
+              <p>As melhores identidades nascem de detalhes verdadeiros, e não apenas de tendências.</p>
+            </div>
+          </div>
+
+          <div class="fields-stack">
+            <label class="field">
+              <span>Como vocês se conheceram? *</span>
+              <textarea
+                name="como_se_conheceram"
+                rows="5"
+                required
+                placeholder="Conte de forma livre, incluindo detalhes que sejam importantes para vocês."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Quais momentos mais marcaram a história do casal?</span>
+              <textarea
+                name="momentos_marcantes"
+                rows="4"
+                placeholder="Viagens, conquistas, mudanças, pedidos, encontros ou tradições."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Como cada um descreveria o outro?</span>
+              <textarea
+                name="como_se_descrevem"
+                rows="4"
+                placeholder="Personalidades, qualidades, contrastes e características marcantes."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>O que vocês gostam de fazer juntos?</span>
+              <textarea
+                name="interesses_compartilhados"
+                rows="3"
+                placeholder="Hobbies, lugares, músicas, filmes, gastronomia, viagens, esportes..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Há alguma referência familiar, cultural ou religiosa importante?</span>
+              <textarea
+                name="referencias_afetivas"
+                rows="3"
+                placeholder="Símbolos, tradições, histórias, versículos, locais ou objetos afetivos."
+              ></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="3" data-section-title="O casamento">
+          <div class="step-heading">
+            <span class="step-number">03</span>
+            <div>
+              <p class="step-kicker">A celebração em perspectiva</p>
+              <h2>O casamento</h2>
+              <p>Agora queremos entender o tamanho, o formato e a atmosfera planejada.</p>
+            </div>
+          </div>
+
+          <div class="fields-grid fields-grid--two">
+            <label class="field">
+              <span>Número aproximado de convidados</span>
+              <input type="number" name="numero_convidados" min="1" inputmode="numeric" />
+            </label>
+
+            <label class="field">
+              <span>Nível de formalidade</span>
+              <select name="formalidade">
+                <option value="">Selecione</option>
+                <option>Muito formal</option>
+                <option>Formal</option>
+                <option>Equilibrado</option>
+                <option>Informal</option>
+                <option>Muito descontraído</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Ambiente principal</span>
+              <select name="ambiente">
+                <option value="">Selecione</option>
+                <option>Igreja / templo</option>
+                <option>Salão clássico</option>
+                <option>Campo / fazenda</option>
+                <option>Praia</option>
+                <option>Jardim</option>
+                <option>Espaço urbano</option>
+                <option>Destination wedding</option>
+                <option>Outro</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Período do evento</span>
+              <select name="periodo_evento">
+                <option value="">Selecione</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Pôr do sol</option>
+                <option>Noite</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Como será a decoração?</span>
+            <textarea
+              name="descricao_decoracao"
+              rows="4"
+              placeholder="Flores, materiais, mobiliário, iluminação, cores já definidas e referências."
+            ></textarea>
+          </label>
+
+          <fieldset class="choice-group" data-required-group="sensacoes">
+            <legend>Quais sensações vocês desejam transmitir? *</legend>
+            <p class="group-help">Escolham quantas fizerem sentido.</p>
+
+            <div class="choice-grid choice-grid--three">
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Acolhimento" />
+                <span>Acolhimento</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Elegância" />
+                <span>Elegância</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Leveza" />
+                <span>Leveza</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Romance" />
+                <span>Romance</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Sofisticação" />
+                <span>Sofisticação</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Alegria" />
+                <span>Alegria</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Intimidade" />
+                <span>Intimidade</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Exclusividade" />
+                <span>Exclusividade</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="sensacoes[]" value="Espontaneidade" />
+                <span>Espontaneidade</span>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="form-step" data-step="4" data-section-title="Estilo e atmosfera">
+          <div class="step-heading">
+            <span class="step-number">04</span>
+            <div>
+              <p class="step-kicker">A direção criativa</p>
+              <h2>Estilo e atmosfera</h2>
+              <p>Não é preciso dominar termos de design. Escolham o que mais combina com vocês.</p>
+            </div>
+          </div>
+
+          <fieldset class="choice-group" data-required-group="estilos">
+            <legend>Quais estilos melhor representam o casamento? *</legend>
+            <p class="group-help">Podem selecionar mais de um.</p>
+
+            <div class="choice-grid choice-grid--three">
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Clássico" />
+                <span>
+                  <strong>Clássico</strong>
+                  <small>Tradicional, refinado e atemporal.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Contemporâneo" />
+                <span>
+                  <strong>Contemporâneo</strong>
+                  <small>Atual, limpo e sofisticado.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Romântico" />
+                <span>
+                  <strong>Romântico</strong>
+                  <small>Delicado, emotivo e acolhedor.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Minimalista" />
+                <span>
+                  <strong>Minimalista</strong>
+                  <small>Essencial, leve e com respiro.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Editorial" />
+                <span>
+                  <strong>Editorial</strong>
+                  <small>Autoral, marcante e fashion.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Natural" />
+                <span>
+                  <strong>Natural</strong>
+                  <small>Orgânico, leve e conectado ao ambiente.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Rústico" />
+                <span>
+                  <strong>Rústico</strong>
+                  <small>Texturas, materiais naturais e aconchego.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Tropical" />
+                <span>
+                  <strong>Tropical</strong>
+                  <small>Vibrante, solar e brasileiro.</small>
+                </span>
+              </label>
+
+              <label class="choice-card choice-card--large">
+                <input type="checkbox" name="estilos[]" value="Artístico" />
+                <span>
+                  <strong>Artístico</strong>
+                  <small>Expressivo, ilustrado e fora do óbvio.</small>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="scale-list">
+            <fieldset class="scale-field">
+              <legend>Clássico ou contemporâneo?</legend>
+              <div class="scale-labels"><span>Clássico</span><span>Contemporâneo</span></div>
+              <input type="range" name="escala_classico_contemporaneo" min="1" max="5" value="3" />
+            </fieldset>
+
+            <fieldset class="scale-field">
+              <legend>Delicado ou marcante?</legend>
+              <div class="scale-labels"><span>Delicado</span><span>Marcante</span></div>
+              <input type="range" name="escala_delicado_marcante" min="1" max="5" value="3" />
+            </fieldset>
+
+            <fieldset class="scale-field">
+              <legend>Minimalista ou ornamentado?</legend>
+              <div class="scale-labels"><span>Minimalista</span><span>Ornamentado</span></div>
+              <input type="range" name="escala_minimalista_ornamentado" min="1" max="5" value="3" />
+            </fieldset>
+
+            <fieldset class="scale-field">
+              <legend>Romântico ou editorial?</legend>
+              <div class="scale-labels"><span>Romântico</span><span>Editorial</span></div>
+              <input type="range" name="escala_romantico_editorial" min="1" max="5" value="3" />
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="5" data-section-title="Identidade visual">
+          <div class="step-heading">
+            <span class="step-number">05</span>
+            <div>
+              <p class="step-kicker">O que a identidade precisa dizer</p>
+              <h2>Direção visual</h2>
+              <p>Preferências, símbolos e limites que vão orientar a criação do sistema visual.</p>
+            </div>
+          </div>
+
+          <div class="fields-stack">
+            <label class="field">
+              <span>O que a identidade deve obrigatoriamente comunicar? *</span>
+              <textarea
+                name="identidade_deve_comunicar"
+                rows="4"
+                required
+                placeholder="Ex.: elegância sem excesso, alegria, personalidade, fé, modernidade..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>O que ela não deve comunicar?</span>
+              <textarea
+                name="identidade_nao_deve_comunicar"
+                rows="3"
+                placeholder="Ex.: algo infantil, muito tradicional, exageradamente floral, frio..."
+              ></textarea>
+            </label>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Vocês desejam algum elemento principal?</legend>
+            <div class="choice-grid choice-grid--three">
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Monograma com iniciais" />
+                <span>Monograma com iniciais</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Brasão ou emblema" />
+                <span>Brasão ou emblema</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Símbolo autoral" />
+                <span>Símbolo autoral</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Nomes completos" />
+                <span>Nomes completos</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Apenas tipografia" />
+                <span>Apenas tipografia</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="elemento_principal" value="Em aberto" />
+                <span>Em aberto</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="fields-grid fields-grid--two">
+            <label class="field">
+              <span>Cores desejadas</span>
+              <textarea
+                name="cores_desejadas"
+                rows="3"
+                placeholder="Inclua cores já definidas na decoração."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Cores que devem ser evitadas</span>
+              <textarea
+                name="cores_evitar"
+                rows="3"
+                placeholder="Cores que não representam vocês."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Elementos ou símbolos que representam o casal</span>
+              <textarea
+                name="simbolos_casal"
+                rows="4"
+                placeholder="Flores, animais, arquitetura, paisagens, objetos, iniciais, datas..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Elementos que não devem aparecer</span>
+              <textarea
+                name="elementos_evitar"
+                rows="4"
+                placeholder="Símbolos, ornamentos ou clichês que vocês não gostam."
+              ></textarea>
+            </label>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Qual abordagem tipográfica mais agrada?</legend>
+            <div class="choice-grid choice-grid--three">
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Serifada clássica" />
+                <span>Serifada clássica</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Serifada editorial" />
+                <span>Serifada editorial</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Caligrafia delicada" />
+                <span>Caligrafia delicada</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Sem serifa minimalista" />
+                <span>Sem serifa minimalista</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Mistura de estilos" />
+                <span>Mistura de estilos</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="tipografia[]" value="Em aberto" />
+                <span>Em aberto</span>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="form-step" data-step="6" data-section-title="Aplicações">
+          <div class="step-heading">
+            <span class="step-number">06</span>
+            <div>
+              <p class="step-kicker">Onde a identidade vai viver</p>
+              <h2>Aplicações necessárias</h2>
+              <p>Selecione os materiais previstos. O escopo final pode ser ajustado depois.</p>
+            </div>
+          </div>
+
+          <fieldset class="choice-group" data-required-group="aplicacoes">
+            <legend>Quais peças fazem parte do projeto? *</legend>
+
+            <div class="choice-grid choice-grid--three">
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Monograma / assinatura" />
+                <span>Monograma / assinatura</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Save the date" />
+                <span>Save the date</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Convite físico" />
+                <span>Convite físico</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Convite digital" />
+                <span>Convite digital</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Site do casamento" />
+                <span>Site do casamento</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Envelope e lacre" />
+                <span>Envelope e lacre</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Manual dos padrinhos" />
+                <span>Manual dos padrinhos</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Menu" />
+                <span>Menu</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Numeração de mesas" />
+                <span>Numeração de mesas</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Identificação de lugares" />
+                <span>Identificação de lugares</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Placas de sinalização" />
+                <span>Placas de sinalização</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Lágrimas de alegria" />
+                <span>Lágrimas de alegria</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Tags e lembranças" />
+                <span>Tags e lembranças</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Votos / papelaria da cerimônia" />
+                <span>Votos / cerimônia</span>
+              </label>
+              <label class="choice-card">
+                <input type="checkbox" name="aplicacoes[]" value="Materiais para redes sociais" />
+                <span>Redes sociais</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="fields-stack">
+            <label class="field">
+              <span>Quais peças são prioridade?</span>
+              <textarea
+                name="aplicacoes_prioritarias"
+                rows="3"
+                placeholder="Liste o que precisa ser desenvolvido primeiro."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Existe alguma outra aplicação?</span>
+              <textarea
+                name="outras_aplicacoes"
+                rows="3"
+                placeholder="Chá, noivado, presentes, papelaria especial, brindes..."
+              ></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="7" data-section-title="Referências">
+          <div class="step-heading">
+            <span class="step-number">07</span>
+            <div>
+              <p class="step-kicker">Referências com intenção</p>
+              <h2>O que inspira vocês</h2>
+              <p>Links e exemplos ajudam, mas saber o motivo de cada escolha é ainda mais importante.</p>
+            </div>
+          </div>
+
+          <div class="fields-stack">
+            <label class="field">
+              <span>Links de referências que vocês gostam</span>
+              <textarea
+                name="links_referencias_positivas"
+                rows="4"
+                placeholder="Pinterest, Instagram, Behance, Drive ou outros links — um por linha."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>O que mais chama atenção nessas referências?</span>
+              <textarea
+                name="motivos_referencias_positivas"
+                rows="4"
+                placeholder="Cores, composição, tipografia, atmosfera, materiais, ilustrações..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Links de referências que não representam vocês</span>
+              <textarea
+                name="links_referencias_negativas"
+                rows="3"
+                placeholder="Exemplos úteis para entender o que deve ser evitado."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>O que incomoda nessas referências?</span>
+              <textarea
+                name="motivos_referencias_negativas"
+                rows="3"
+                placeholder="Excesso de ornamentos, cores, estilo genérico, tipografia, clichês..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Há algum fornecedor ou decisão visual já definida?</span>
+              <textarea
+                name="fornecedores_decisoes"
+                rows="4"
+                placeholder="Decorador, cerimonial, flores, mobiliário, vestido, traje, local..."
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Existe mais alguma informação importante?</span>
+              <textarea
+                name="observacoes_finais"
+                rows="5"
+                placeholder="Conte qualquer detalhe que ainda não apareceu no briefing."
+              ></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="8" data-section-title="Revisão">
+          <div class="step-heading">
+            <span class="step-number">08</span>
+            <div>
+              <p class="step-kicker">Última etapa</p>
+              <h2>Revise antes de enviar</h2>
+              <p>Confira as respostas abaixo. Você pode voltar às etapas anteriores para alterar qualquer informação.</p>
+            </div>
+          </div>
+
+          <div id="reviewContent" class="review-content"></div>
+
+          <label class="consent">
+            <input type="checkbox" name="confirmacao_informacoes" value="Confirmado" required />
+            <span>Confirmo que as informações estão corretas e podem ser utilizadas no desenvolvimento do projeto.</span>
+          </label>
+
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="form-step form-step--success" data-step="9">
+          <div class="success-box">
+            <span class="success-icon" aria-hidden="true">✓</span>
+            <p class="step-kicker">Briefing recebido</p>
+            <h2>Obrigado por compartilhar a história de vocês.</h2>
+            <p>
+              As respostas foram enviadas com sucesso e servirão de base para a construção
+              de uma identidade visual autêntica, coerente e cheia de significado.
+            </p>
+            <button type="button" class="button button--secondary" id="restartForm">
+              Preencher novo briefing
+            </button>
+          </div>
+        </section>
+
+        <div class="form-navigation" id="formNavigation">
+          <button type="button" class="button button--ghost" data-prev>
+            <span aria-hidden="true">←</span>
+            Voltar
+          </button>
+
+          <div class="progress-wrap" aria-label="Progresso do briefing">
+            <div class="progress-meta">
+              <span id="progressLabel">Etapa 1 de 8</span>
+              <span id="progressPercent">13%</span>
+            </div>
+            <div class="progress-track">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+
+          <button type="button" class="button button--primary" data-next>
+            Continuar
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <button type="submit" class="button button--primary" data-submit hidden>
+            Enviar briefing
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="currentYear"></span> JOÃO ALBERTO</span>
+      <span>DESIGN, IDENTIDADE E EXPERIÊNCIAS DIGITAIS</span>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
