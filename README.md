@@ -58,3 +58,12 @@ O formulário usa:
 - DM Mono
 
 As fontes são carregadas pelo Google Fonts.
+
+
+## Correção v2 — envio Formspree
+
+Esta versão remove o campo `_gotcha` do HTML e também o exclui defensivamente no JavaScript antes do envio.
+
+O `_gotcha` é um honeypot especial do Formspree: quando chega preenchido, o serviço pode ignorar a submissão silenciosamente. Por isso, esta versão não o utiliza.
+
+Depois de publicar a v2, faça uma submissão de teste e confira em **Formspree → Submissions → Inbox**.

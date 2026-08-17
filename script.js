@@ -77,7 +77,6 @@
 
   const ignoredFields = new Set([
     "_subject",
-    "_gotcha",
     "confirmacao_informacoes"
   ]);
 
@@ -374,9 +373,16 @@
     formStatus.className = "form-status";
 
     try {
+      const formData = new FormData(form);
+
+      // Defesa extra: nunca envia o campo especial _gotcha do Formspree.
+      // Se esse campo chegar preenchido, o Formspree pode ignorar
+      // silenciosamente a submissão como spam.
+      formData.delete("_gotcha");
+
       const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: formData,
         headers: {
           Accept: "application/json"
         }

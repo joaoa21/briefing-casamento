@@ -702,11 +702,6 @@ a {
   line-height: 1.7;
 }
 
-.honeypot {
-  position: absolute !important;
-  left: -9999px !important;
-}
-
 @media (max-width: 980px) {
   .page-shell {
     padding: 0 24px;
