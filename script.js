@@ -102,6 +102,14 @@
       const navigationNext = navigation.querySelector("[data-next]");
       navigationNext.hidden = currentStep === REVIEW_STEP;
 
+      // Defesa adicional contra estilos que sobrescrevam o atributo hidden.
+      previousButton.style.display =
+        currentStep === FIRST_FORM_STEP ? "none" : "";
+      submitButton.style.display =
+        currentStep === REVIEW_STEP ? "" : "none";
+      navigationNext.style.display =
+        currentStep === REVIEW_STEP ? "none" : "";
+
       updateProgress();
 
       if (currentStep === REVIEW_STEP) {
@@ -187,6 +195,11 @@
   function goNext() {
     if (currentStep === 0) {
       setStep(FIRST_FORM_STEP);
+      return;
+    }
+
+    // A etapa de revisão só pode ser concluída pelo envio real.
+    if (currentStep >= REVIEW_STEP) {
       return;
     }
 
@@ -374,10 +387,6 @@
 
     try {
       const formData = new FormData(form);
-
-      // Defesa extra: nunca envia o campo especial _gotcha do Formspree.
-      // Se esse campo chegar preenchido, o Formspree pode ignorar
-      // silenciosamente a submissão como spam.
       formData.delete("_gotcha");
 
       const response = await fetch(form.action, {
@@ -389,8 +398,21 @@
       });
 
       if (!response.ok) {
-        throw new Error("Não foi possível enviar o briefing.");
+        let errorPayload = "";
+
+        try {
+          errorPayload = JSON.stringify(await response.json());
+        } catch (_) {
+          try {
+            errorPayload = await response.text();
+          } catch (_) {}
+        }
+
+        console.error("Erro do Formspree:", response.status, errorPayload);
+        throw new Error(`Não foi possível enviar o briefing. HTTP ${response.status}`);
       }
+
+      console.info("Formspree confirmou o envio.", response.status);
 
       clearSavedForm();
       form.reset();
